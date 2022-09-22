@@ -1,4 +1,5 @@
 @import "fonts";
+@import "locomotive";
 
 /*general styling reset*/
 * {
@@ -9,8 +10,9 @@
 
 body {
     min-height: 100vh;
+    // width: 100%;
     overflow-x: hidden;
-    background-color: #e4e4e4;
+    background-color: aqua;
     color: #fff;
     font-family: "pop-reg";
 
@@ -24,11 +26,119 @@ body {
 }
 
 .sec {
-    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
     width: 100%;
-    background-color: teal;
+    padding: 2em;
+    gap: 3em;
+    color: #fff;
 
-    &:nth-of-type(2) {
-        background-color: slateblue;
+    // just sections with color differentiation
+
+    &--purple {
+        background-color: blueviolet;
+    }
+
+    &--orange {
+        background-color: coral;
+        color: #111;
+    }
+
+    &--darkblue {
+        background-color: cornflowerblue;
+    }
+
+    // for section with image container
+    &--image {
+        position: relative;
+        color: #111;
+        padding-top: 27%;
+        display: block;
+        text-align: center;
+    }
+
+    &--image & {
+        &__title {
+            color: rgb(251, 255, 0);
+            text-align: center;
+            margin-bottom: 3em;
+            position: relative;
+            max-width: 564px;
+
+            &--purple {
+                color: rgb(133, 135, 255);
+            }
+
+            &::before {
+                content: "";
+                position: absolute;
+                top: 45px;
+                // left: 1.6em;
+                height: 7px;
+                // width: 90px;
+                width: 70%;
+                border-radius: 15px 180px 0 15px;
+                background-color: #fff;
+            }
+        }
+
+        &__text {
+            /* From https://css.glass */
+            background: rgba(255, 255, 255, 0.2);
+            border-radius: 16px;
+            box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+            backdrop-filter: blur(5px);
+            -webkit-backdrop-filter: blur(5px);
+            border: 1px solid rgba(255, 255, 255, 0.3);
+        }
+
+        &__image-container {
+            position: absolute;
+            top: 10vh;
+            right: 5vw;
+            // transform: translate(-50%, -50%);
+            width: 50%;
+            height: 50%;
+            min-width: 500px;
+            min-height: 500px;
+            background-color: crimson;
+            z-index: -1;
+
+            &--crimson {
+                background-color: crimson;
+                background-image: url("../assets/images/river-logo.svg");
+                background-size: cover;
+                background-repeat: no-repeat;
+                background-position: 0 -11.9em;
+            }
+
+            &--green {
+                background-color: lightseagreen;
+                background-image: url("../assets/images/avocado.svg");
+                background-size: 100%;
+                background-repeat: no-repeat;
+                background-position: 0 -7.9em;
+            }
+        }
+    }
+
+    &__title {
+        font-family: "pop-bold";
+        font-size: 2.5em;
+        color: #fff;
+        text-align: center;
+        align-self: flex-start;
+        // margin-bottom: 3em;
+    }
+
+    &__text {
+        // margin-top: 5em;
+        font-size: 1.2em;
+        line-height: 1.7em;
+        font-weight: 600;
+        // letter-spacing: 0.2em;
     }
 }

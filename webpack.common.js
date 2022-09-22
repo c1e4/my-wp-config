@@ -13,13 +13,10 @@ module.exports = {
                 use: ["html-loader"],
             },
             {
-                test: /\.(svg|png|jpg|gif)$/,
-                use: {
-                    loader: "file-loader",
-                    options: {
-                        name: "[name]-[hash].[ext]",
-                        outputPath: "assets/images",
-                    },
+                test: /\.(svg|png|jpg|jpeg|gif)$/,
+                type: "asset/resource",
+                generator: {
+                    filename: "./assets/images/[name]-[hash][ext]",
                 },
             },
             {
