@@ -18,8 +18,15 @@ module.exports = {
                     loader: "file-loader",
                     options: {
                         name: "[name]-[hash].[ext]",
-                        outputPath: "images",
+                        outputPath: "assets/images",
                     },
+                },
+            },
+            {
+                test: /\.(woff(2)?|ttf|otf|eot)$/,
+                type: "asset/resource",
+                generator: {
+                    filename: "./assets/fonts/[name]-[hash][ext]",
                 },
             },
         ],

@@ -13,7 +13,7 @@ const outputCSSFileName = "style";
 module.exports = merge(common, {
     mode: "production",
     output: {
-        filename: `${outputJSFileName}-[contenthash].js`,
+        filename: `js/${outputJSFileName}-[contenthash].js`,
         path: path.resolve(__dirname, "dist"),
     },
     optimization: {
@@ -32,7 +32,7 @@ module.exports = merge(common, {
     },
     plugins: [
         new MiniCssExtractPlugin({
-            filename: `${outputJSFileName}-[contenthash].css`,
+            filename: `css/${outputJSFileName}-[contenthash].css`,
         }),
         new CleanWebpackPlugin(),
     ],

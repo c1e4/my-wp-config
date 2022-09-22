@@ -1,3 +1,5 @@
+@import "fonts";
+
 /*general styling reset*/
 * {
     box-sizing: border-box;
@@ -10,4 +12,9 @@ body {
     overflow-x: hidden;
     background-color: slateblue;
     color: #fff;
+    font-family: "pop-reg";
+}
+
+.title {
+    font-family: "pop-bold";
 }
