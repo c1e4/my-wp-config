@@ -13,12 +13,12 @@ console.log(generateJoke());
 
 // console.log(uuidv4());
 
-// import LocomotiveScroll from "locomotive-scroll";
+import LocomotiveScroll from "locomotive-scroll";
 
-// const scroll = new LocomotiveScroll({
-//     el: document.querySelector("[data-scroll-container]"),
-//     smooth: true,
-// });
+const scroll = new LocomotiveScroll({
+    el: document.querySelector("[data-scroll-container]"),
+    smooth: true,
+});
 
 const isBabel = !(class {}.toString().indexOf("class ") === 0);
 console.log("babel enabled: " + isBabel);
