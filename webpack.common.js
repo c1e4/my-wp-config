@@ -18,6 +18,12 @@ module.exports = {
                 generator: {
                     filename: "./assets/images/[name]-[hash][ext]",
                 },
+                // embed small images in the HTML to reduce load time. WP5 native
+                parser: {
+                    dataUrlCondition: {
+                        maxSize: 10 * 1024, // Inline anything under 10kb
+                    },
+                },
             },
             {
                 test: /\.(woff(2)?|ttf|otf|eot)$/,
