@@ -9,6 +9,8 @@ import generateJoke from "./generateJoke";
 
 import "./scss/style.scss";
 
+// import "./assets/images/river-logo.svg";
+
 console.log(generateJoke());
 
 // console.log(uuidv4());
