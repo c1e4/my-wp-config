@@ -83,7 +83,7 @@ module.exports = merge(common, {
             filename: `css/${outputJSFileName}-[contenthash].css`,
         }),
         new CleanWebpackPlugin(),
-        new BundleAnalyzerPlugin(),
+        // new BundleAnalyzerPlugin(),
     ],
     module: {
         rules: [
