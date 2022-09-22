@@ -13,6 +13,7 @@ module.exports = merge(common, {
         static: {
             directory: path.resolve(__dirname, "dist"),
         },
+        watchFiles: ["src/*.html"],
         port: 3000,
         hot: true,
         compress: true,
