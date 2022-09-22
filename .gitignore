@@ -66,8 +66,11 @@ node_modules/
 # ignore jekyll build directory
 /_site
 
-# ignore parcel build directory
+# ignore build directory
 /dist
+
+# ignore webpack-analyzer stats report file
+stats.json
 
 # ignore OS generated files
 ehthumbs.db

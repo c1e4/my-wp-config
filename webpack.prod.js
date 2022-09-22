@@ -7,6 +7,8 @@ const OptimizeCssAssetsPlugin = require("optimize-css-assets-webpack-plugin");
 const TerserPlugin = require("terser-webpack-plugin");
 const HtmlWebpackPlugin = require("html-webpack-plugin");
 const ImageMinimizerPlugin = require("image-minimizer-webpack-plugin"); //to optimize imgs
+const BundleAnalyzerPlugin =
+    require("webpack-bundle-analyzer").BundleAnalyzerPlugin;
 
 const outputJSFileName = "script";
 const outputCSSFileName = "style";
@@ -81,6 +83,7 @@ module.exports = merge(common, {
             filename: `css/${outputJSFileName}-[contenthash].css`,
         }),
         new CleanWebpackPlugin(),
+        new BundleAnalyzerPlugin(),
     ],
     module: {
         rules: [
