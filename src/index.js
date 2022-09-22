@@ -19,3 +19,14 @@ console.log(generateJoke());
 //     el: document.querySelector("[data-scroll-container]"),
 //     smooth: true,
 // });
+
+const isBabel = !(class {}.toString().indexOf("class ") === 0);
+console.log("babel enabled: " + isBabel);
+
+const fn = () => 1;
+
+const hangryMode = (food = "sushi") => {
+    console.log(`I am so hangry!!! I want ${food} !!!`);
+};
+
+hangryMode("peka");
