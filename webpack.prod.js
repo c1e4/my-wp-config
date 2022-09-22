@@ -44,6 +44,7 @@ module.exports = merge(common, {
                 use: [
                     MiniCssExtractPlugin.loader, //3. Extract css into files
                     "css-loader", //2. Turns css into commonjs
+                    "postcss-loader", //for autoprefixer
                     "sass-loader", //1. Turns sass into css
                 ],
             },
