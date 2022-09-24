@@ -125,3 +125,6 @@ Thumbs.db
 !.gitignore
 !.nvmrc
 !.phpcs.xml.dist
+
+#config for babel (babelrc)
+.babelrc
