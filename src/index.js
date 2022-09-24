@@ -5,7 +5,7 @@ console.log("lel");
 
 // import { v4 as uuidv4 } from "uuid";
 
-import generateJoke from "./generateJoke";
+import generateJoke from "./js/generateJoke";
 
 import "./scss/style.scss";
 
@@ -13,20 +13,22 @@ console.log(generateJoke());
 
 // console.log(uuidv4());
 
-import LocomotiveScroll from "locomotive-scroll";
+checkBabel();
 
-const scroll = new LocomotiveScroll({
-    el: document.querySelector("[data-scroll-container]"),
-    smooth: true,
-});
+/**
+ * Checks that can indicate that babel is working.
+ * Look at the compiled code to see that.
+ */
 
-const isBabel = !(class {}.toString().indexOf("class ") === 0);
-console.log("babel enabled: " + isBabel);
+function checkBabel() {
+    const hangryMode = (food = "sushi") => {
+        console.log(`I am so hangry!!! I want ${food} !!!`);
+    };
 
-const fn = () => 1;
+    hangryMode("peka");
 
-const hangryMode = (food = "sushi") => {
-    console.log(`I am so hangry!!! I want ${food} !!!`);
-};
+    const isBabel = !(class {}.toString().indexOf("class ") === 0);
+    console.log("babel enabled: " + isBabel);
 
-hangryMode("peka");
+    const fn = () => 1;
+}
