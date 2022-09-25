@@ -3,7 +3,10 @@ const common = require("./webpack.common");
 const { merge } = require("webpack-merge");
 const { CleanWebpackPlugin } = require("clean-webpack-plugin");
 const MiniCssExtractPlugin = require("mini-css-extract-plugin");
-const OptimizeCssAssetsPlugin = require("optimize-css-assets-webpack-plugin");
+
+const CssMinimizerPlugin = require("css-minimizer-webpack-plugin");
+
+// const OptimizeCssAssetsPlugin = require("optimize-css-assets-webpack-plugin");
 const TerserPlugin = require("terser-webpack-plugin");
 const HtmlWebpackPlugin = require("html-webpack-plugin");
 const ImageMinimizerPlugin = require("image-minimizer-webpack-plugin"); //to optimize imgs
@@ -21,7 +24,7 @@ module.exports = merge(common, {
     },
     optimization: {
         minimizer: [
-            new OptimizeCssAssetsPlugin(),
+            new CssMinimizerPlugin(),
             new TerserPlugin(),
             new HtmlWebpackPlugin({
                 template: "./src/template.html",
