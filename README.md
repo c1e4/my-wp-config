@@ -57,7 +57,7 @@ dist
 **Installation:** 
 1. Clone this repo:
 ```console
-git clone <URL> && cd .
+git clone https://github.com/c1e4/my-wp-config.git && cd ./my-wp-config
 ```
 
 2. Delete package-lock.json
@@ -77,9 +77,9 @@ rm -rf ./package-lock.json
 npm i -D @babel/core @babel/preset-env autoprefixer babel-loader clean-webpack-plugin css-loader file-loader html-loader html-webpack-plugin image-minimizer-webpack-plugin imagemin imagemin-gifsicle imagemin-jpegtran imagemin-optipng imagemin-svgo mini-css-extract-plugin node-sass css-minimizer-webpack-plugin postcss-loader sass-loader style-loader webpack webpack-bundle-analyzer webpack-cli webpack-dev-server webpack-merge sass semver-regex@4.0.1 trim-newlines@4.0.1 got@12.5.0
 ```
 
-4. Reintroduce package-lock.json again
+4. Delete and reintroduce package-lock.json again:
 ```console
-curl -O "https://raw.githubusercontent.com/c1e4/website-structure-initializer/master/ws-initializer.sh"
+rm -rf ./package-lock.json && curl -O "https://raw.githubusercontent.com/c1e4/my-wp-config/master/package-lock.json"
 ```
 
 5. Update packages. For example, with npm-check-updates:
@@ -106,3 +106,8 @@ npm run build
 ```console
 npm run report 
 ```
+<br>
+
+**PS:**
+Supplied demo website may not be pretty (freaking ugly in fact), but it is here just to showcase the abilities of bundler.
+Change HTML temlate, favicon, styles, js code as you want.
